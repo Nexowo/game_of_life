@@ -11,4 +11,4 @@ You can change parameters:
 To run :
 * Make sure that Rust is well installed on your computer (<a href = https://www.rust-lang.org/tools/install>Installation link</a>)
 * Make sure that cargo's location is added to your PATH variable
-* Open a terminal in the project's location and type `cargo run`
+* Open a terminal in the project and type `cargo run`
