@@ -12,7 +12,7 @@ fn next_epoch(mut board : Vec<Vec<usize>>, size : usize)->Vec<Vec<usize>> {
                 count[i][j] += board[i+1][j];
             }
             if i != size-1 {
-                count[i][j] += board[i][j-1];
+                count[i][j] += board[i+1][j];
             }
             if i != 0 && j != 0 {
                 count[i][j] += board[i-1][j-1];
@@ -47,4 +47,5 @@ fn main() {
     let size : usize = 5;
     let mut board = vec![vec![0; size]; size];
     board = next_epoch(board, size);
+    println!("{:?}", board);
 }
