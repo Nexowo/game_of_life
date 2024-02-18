@@ -11,8 +11,8 @@ fn next_epoch(mut board : Vec<Vec<usize>>, size : usize)->Vec<Vec<usize>> {
             if i != size-1 {
                 count[i][j] += board[i+1][j];
             }
-            if i != size-1 {
-                count[i][j] += board[i+1][j];
+            if j != size-1 {
+                count[i][j] += board[i][j+1];
             }
             if i != 0 && j != 0 {
                 count[i][j] += board[i-1][j-1];
