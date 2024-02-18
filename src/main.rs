@@ -55,14 +55,15 @@ fn print_board(board : &Vec<Vec<usize>>, size : usize, epoch : u32) {
 
 fn main() {
     let size : usize = 5;
+    let nb_epochs : u32 = 10;
     let mut board = vec![vec![0; size]; size];
     board[0][0] = 1;
     board[2][2] = 1;
     board[1][2] = 1;
     board[3][2] = 1;
     print_board(&board, size, 0);
-    for i in 1..5 {
+    for i in 0..nb_epochs {
         board = next_epoch(board, size);
-        print_board(&board, size, i);
+        print_board(&board, size, i+1);
     }
 }
