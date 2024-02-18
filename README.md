@@ -8,4 +8,7 @@ You can change parameters:
 * `nb_epochs` to change the number of loops that will be executed
 * You can add `board[x][y] = 1` where `x` and `y` are values in between `0` (included) and `size` (excluded) where you want `1` to be and suppress those preexisting to do your own initial configuration
 
-To run : Open a terminal and type `cargo run`
+To run :
+* Make sure that Rust is well installed on your computer (<a href = https://www.rust-lang.org/tools/install>Installation link</a>)
+* Make sure that cargo's location is added to your PATH variable
+* Open a terminal in the project's location and type `cargo run`
