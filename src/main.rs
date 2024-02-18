@@ -1,5 +1,5 @@
-fn next_epoch(board : [Vec<Vec<usize>>; 1], size : usize)->[Vec<Vec<usize>>; 1] {
-    let mut count = [vec![vec![0; size]; size]];
+fn next_epoch(mut board : Vec<Vec<usize>>, size : usize)->Vec<Vec<usize>> {
+    let mut count = vec![vec![0; size]; size];
     for i in 0..size {
         for j in 0..size {
             if i != 0 {
@@ -45,6 +45,6 @@ fn next_epoch(board : [Vec<Vec<usize>>; 1], size : usize)->[Vec<Vec<usize>>; 1] 
 
 fn main() {
     let size : usize = 5;
-    let mut board = [vec![vec![0; size]; size]];
+    let mut board = vec![vec![0; size]; size];
     board = next_epoch(board, size);
 }
