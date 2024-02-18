@@ -43,18 +43,26 @@ fn next_epoch(mut board : Vec<Vec<usize>>, size : usize)->Vec<Vec<usize>> {
     board
 }
 
-fn print_board(board : Vec<Vec<usize>>, size : usize) {
+fn print_board(board : &Vec<Vec<usize>>, size : usize, epoch : u32) {
+    print!("\n{} generation\n", epoch);
     for i in 0..size {
         for j in 0..size {
-            println!("{} ", board[i][j]);
+            print!("{} ", board[i][j]);
         }
-        println!("\n");
+        print!("\n");
     }
 }
 
 fn main() {
     let size : usize = 5;
     let mut board = vec![vec![0; size]; size];
-    board = next_epoch(board, size);
-    print_board(board, size);
+    board[0][0] = 1;
+    board[2][2] = 1;
+    board[1][2] = 1;
+    board[3][2] = 1;
+    print_board(&board, size, 0);
+    for i in 1..5 {
+        board = next_epoch(board, size);
+        print_board(&board, size, i);
+    }
 }
